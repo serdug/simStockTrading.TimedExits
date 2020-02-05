@@ -1,0 +1,24 @@
+---
+# Path to input files containing trade signals.
+path: './data/'
+# Input (CSV) files.
+input: 
+  - 'example.csv'
+# Output (CSV) files (full file names including paths) for results of 
+# calculation.
+output: 
+  - './calc/output.csv'
+# Holding period (e.g. days).
+keep: 5
+# Broker's commission per share bought or sold.
+comm: 0.007
+# Cash initially allocated for trading. It is the limit of exposure.
+cash: 10000000
+# Coefficients, such as 5 (for 1/5 limit per position held for 5 days), to be 
+# multiplied to calculate the proportional limit of exposure per position. 
+# Note: it may be convenient to list more than one coefficient if signals are 
+# provided with (absolute) values of up/down signals greater than 1.
+# The coefficients help to respect the total limit of exposure.
+coef:
+  - 5
+...
